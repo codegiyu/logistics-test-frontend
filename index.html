@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="./node_modules/socket.io/client-dist/socket.io.js"></script>
+    <title>Logistics Frontend</title>
+</head>
+<body>
+    <main>
+        <section id="user-details">
+            <h2>User Details</h2>
+            <p class="user-detail-label">User ID: <span id="user-id" class="user-detail-field"></span></p>
+            <p class="user-detail-label">Role: <span id="role" class="user-detail-field"></span></p>
+            <p class="user-detail-label">Token: <span id="token" class="user-detail-field"></span></p>
+            <p class="user-detail-label">Socket ID: <span id="socket" class="user-detail-field"></span></p>
+        </section>
+        <form id="register-user">
+            <h2>Register User</h2>
+            <label>
+                <span>Full Name</span>
+                <input
+                    type="text"
+                    name="full_name"
+                    required
+                >
+            </label>
+            <label>
+                <span>Email</span>
+                <input
+                    type="email"
+                    name="email"
+                    required
+                >
+            </label>
+            <label>
+                <span>Password</span>
+                <input
+                    type="text"
+                    name="password"
+                    required
+                >
+            </label>
+            <button type="submit">Submit</button>
+        </form>
+        <form id="register-rider">
+            <h2>Register Rider</h2>
+            <label>
+                <span>Full Name</span>
+                <input
+                    type="text"
+                    name="full_name"
+                    required
+                >
+            </label>
+            <label>
+                <span>Email</span>
+                <input
+                    type="email"
+                    name="email"
+                    required
+                >
+            </label>
+            <label>
+                <span>Password</span>
+                <input
+                    type="text"
+                    name="password"
+                    required
+                >
+            </label>
+            <button type="submit">Submit</button>
+        </form>
+
+        <form id="login">
+            <h2>Login</h2>
+            <label>
+                <span>Email</span>
+                <input
+                    type="email"
+                    name="email"
+                    required
+                >
+            </label>
+            <label>
+                <span>Password</span>
+                <input
+                    type="text"
+                    name="password"
+                    required
+                >
+            </label>
+            <button type="submit">Submit</button>
+        </form>
+
+        <form id="request-delivery">
+            <h2>Request Delivery</h2>
+            <label>
+                <span>Address</span>
+                <input
+                    type="text"
+                    name="address"
+                    required
+                >
+            </label>
+            <label>
+                <span>Destination Address</span>
+                <input
+                    type="text"
+                    name="destination_address"
+                    required
+                >
+            </label>
+            <label>
+                <span>Item Weight</span>
+                <input
+                    type="number"
+                    name="item_weight"
+                    required
+                >
+            </label>
+            <button type="submit">Submit</button>
+        </form>
+        <form id="accept-delivery">
+            <h2>Accept Delivery</h2>
+            <label>
+                <span>Delivery ID</span>
+                <input
+                    type="text"
+                    name="delivery_id"
+                    required
+                >
+            </label>
+            <button type="submit">Submit</button>
+        </form>
+        <form id="mark-delivery-complete">
+            <h2>Mark Delivery Complete</h2>
+            <label>
+                <span>Delivery ID</span>
+                <input
+                    type="text"
+                    name="delivery_id"
+                    required
+                >
+            </label>
+            <button type="submit">Submit</button>
+        </form>
+    </main>
+    
+    <script src="index.js"></script>
+</body>
+</html>
